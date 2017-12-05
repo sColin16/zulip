@@ -2751,6 +2751,9 @@ class MessageHydrationTest(ZulipTestCase):
         
         
 class OctopusTest(ZulipTestCase):
+    def setUp(self) -> None:
+        print("setup")
+    
     def test_change_welcome_message(self) -> None:
         sender = get_user('iago@zulip.com', get_realm('zulip'))
         client = make_client(name="test suite")
